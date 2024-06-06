@@ -1,39 +1,60 @@
-# .
+# Просмотр персонажей Рика и Морти
 
-This template should help get you started developing with Vue 3 in Vite.
+Этот проект представляет собой веб-приложение, где пользователи могут просматривать персонажей из сериала "Рик и Морти".
 
-## Recommended IDE Setup
+## Структура проекта
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
+Структура проекта выглядит следующим образом:
 
-## Type Support for `.vue` Imports in TS
-
-TypeScript cannot handle type information for `.vue` imports by default, so we replace the `tsc` CLI with `vue-tsc` for type checking. In editors, we need [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) to make the TypeScript language service aware of `.vue` types.
-
-## Customize configuration
-
-See [Vite Configuration Reference](https://vitejs.dev/config/).
-
-## Project Setup
-
-```sh
-npm install
+``` js
+dist            // Папка для сборки проекта
+node_modules    // Папка для зависимостей проекта
+public          // Публичные статические файлы
+src             // Исходный код проекта
+  ├── api           // Модуль для работы с API
+  ├── assets        // Статические ресурсы (например, изображения)
+  ├── components    // Компоненты Vue
+  │   ├── common       // Общие компоненты
+  │   ├── CharacterCard.vue   // Компонент карточки персонажа
+  │   ├── CharacterSection.vue // Компонент секции персонажей
+  │   ├── Filter.vue     // Компонент фильтрации персонажей
+  │   ├── Navigation.vue // Компонент навигации
+  ├── stores        // Модули Pinia для управления состоянием
+  ├── types         // Типы TypeScript
+  ├── App.vue       // Главный компонент приложения
+  ├── main.ts       // Точка входа в приложение
 ```
+## Где посмотреть проект
+Проект загружен на GitHub Pages, чтобы посмотреть на реализацию приложения необходимо перейти по адресу [https://llladno.github.io/DataHeroes/](https://llladno.github.io/DataHeroes/)
 
-### Compile and Hot-Reload for Development
+## Как запустить проект
 
-```sh
-npm run dev
-```
+Для запуска этого проекта вам нужно установить [Node.js](https://nodejs.org/) на ваш компьютер. Следуйте этим шагам:
 
-### Type-Check, Compile and Minify for Production
+1. **Клонируйте репозиторий**:
+    ```sh
+    git clone https://github.com/llladno/DataHeroes.git
+    cd DataHeroes
+    ```
 
-```sh
-npm run build
-```
+2. **Установите зависимости**:
+    ```sh
+    npm install
+    ```
 
-### Lint with [ESLint](https://eslint.org/)
+3. **Запустите сервер разработки**:
+    ```sh
+    npm run dev
+    ```
 
-```sh
-npm run lint
-```
+4. **Откройте браузер** и перейдите по адресу  [localhost:5173](http://localhost:5173), чтобы увидеть приложение в действии.
+
+## Используемые технологии
+
+Этот проект построен с использованием следующих технологий:
+
+- **Vue 3**: Прогрессивный JavaScript-фреймворк для построения пользовательских интерфейсов.
+  - **Options API**: В этом проекте используется Options API для определения компонентов.
+- **TypeScript**: Строгий синтаксический надмножество JavaScript, который добавляет статическую типизацию.
+- **Pinia**: Библиотека управления состоянием для Vue, аналогичная Vuex, но более легковесная и удобная в использовании.
+
